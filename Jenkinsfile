@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                docker.build  + ":$BUILD_NUMBER"
+                docker build . -t testimage:v1
             }
         }
         stage('Test') {
