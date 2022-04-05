@@ -6,7 +6,9 @@ pipeline {
             steps {
                 echo 'Building..'
                 script{
-                    docker.build("test:${env.BUILD_ID}")
+                      echo "hello"
+                    
+                  //  docker.build("test:${env.BUILD_ID}")
                 }
 //                 docker build . -t testimage:v1
             }
