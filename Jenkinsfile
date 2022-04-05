@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                docker.build("test", "-f Dockerfile .")
+                docker.build("test:${env.BUILD_ID}")
 
 //                 docker build . -t testimage:v1
             }
