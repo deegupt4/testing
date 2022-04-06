@@ -17,7 +17,7 @@ kind: Pod
 spec:
   containers:
   - name: dind
-    image: docker:18.05-dind
+    image: docker:19.03.1-dind
     securityContext:
       privileged: true
     volumeMounts:
