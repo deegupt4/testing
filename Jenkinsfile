@@ -13,6 +13,8 @@ spec:
 ''') {
     node(POD_LABEL) {
         container('docker') {
+            sh 'pwd'
+            sh 'ls -ltr'
             sh 'docker build -t busybox .'
         }
     }
