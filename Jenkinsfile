@@ -10,7 +10,7 @@ pipeline {
                 script{
                       echo "hello"
                     
-                  //  docker.build("test:${env.BUILD_ID}")
+                   docker.build("test:${env.BUILD_ID}")
                 }
 //                 docker build . -t testimage:v1
             }
