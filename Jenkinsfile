@@ -1,8 +1,13 @@
-{
-    node(POD_LABEL) {
-        git 'https://github.com/nginxinc/docker-nginx.git'
-        container('docker') {
-            sh 'docker version && cd stable/alpine/ && docker build -t nginx-example .'
-        }
+pipeline {
+    agent {
+      label "slave1"
     }
-}
+    environment {
+      ...
+    }
+    stages {
+      stage('CI Build and push snapshot') {
+        steps {
+          container('docker') {
+            sh "mvn deploy"
+          }
