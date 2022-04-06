@@ -9,6 +9,7 @@ pipeline {
                 echo 'Building..'
                 script{
                       echo "ls"
+                      sh 'docker version && docker build -t busybox .'
                       //docker build . -t testimage:v1
                     
                   // docker.build("test:${env.BUILD_ID}")
