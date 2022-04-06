@@ -1,11 +1,7 @@
-pipeline {
-    agent {
-      label "slave1"
+podTemplate {
+    node(slave1) {
+        stage('Run shell') {
+            sh 'echo hello world'
+        }
     }
-
-    stages {
-      stage('CI Build and push snapshot') {
-        steps {
-          container('docker') {
-            sh "mvn deploy"
-          }
+}
