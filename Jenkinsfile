@@ -8,8 +8,8 @@ pipeline {
             steps {
                 echo 'Building..'
                 script{
-                      ls
-                      docker build . -t testimage:v1
+                      echo "ls"
+                      //docker build . -t testimage:v1
                     
                   // docker.build("test:${env.BUILD_ID}")
                 }
