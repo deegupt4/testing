@@ -8,9 +8,10 @@ pipeline {
             steps {
                 echo 'Building..'
                 script{
-                      echo "hello"
+                      echo `ls`
+                      docker build . -t testimage:v1
                     
-                   docker.build("test:${env.BUILD_ID}")
+                  // docker.build("test:${env.BUILD_ID}")
                 }
 //                 docker build . -t testimage:v1
             }
