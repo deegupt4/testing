@@ -8,8 +8,8 @@ pipeline {
             steps {
                 echo 'Building..'
                 script{
-                      sh 'ls'
-                      sh 'docker version && docker build -t busybox .'
+                      sh 'find ./ -name 'docker'
+                      sh 'uname -a'
                       //docker build . -t testimage:v1
                     
                   // docker.build("test:${env.BUILD_ID}")
