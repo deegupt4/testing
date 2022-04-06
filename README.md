@@ -9,3 +9,6 @@ How to define k8s slave label in job:-
 1. For freestyle:-
    https://devopscube.com/jenkins-build-agents-kubernetes/
 2. For pipeline:-
+
+    agent { label 'slave1' }
+   
