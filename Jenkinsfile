@@ -14,7 +14,8 @@ spec:
     node(POD_LABEL) {
   
         container('docker') {
-            sh 'ls -ltr'
+            sh 'pwd'
+            sh 'docker --version'
         }
     }
 }
