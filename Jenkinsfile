@@ -6,6 +6,7 @@ podTemplate(inheritFrom: 'slave1', containers: [
         container('docker') {
   
             sh 'ls -ltr'
+            sh 'uname -a'
         }
     }
 }
