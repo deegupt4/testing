@@ -1,4 +1,6 @@
-podTemplate {
+podTemplate(inheritFrom: 'slave1', containers: [
+    containerTemplate(name: 'docker', image: 'docker:19.03.1-dind')
+  ]) 
  {
     node(POD_LABEL) {
         git 'https://github.com/nginxinc/docker-nginx.git'
@@ -7,4 +9,4 @@ podTemplate {
         }
     }
 }
-}
+
