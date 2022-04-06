@@ -1,27 +1,8 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-                script{
-                      echo "hello"
-                    
-                  //  docker.build("test:${env.BUILD_ID}")
-                }
-//                 docker build . -t testimage:v1
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
+ {
+    node(POD_LABEL) {
+        git 'https://github.com/nginxinc/docker-nginx.git'
+        container('slave1') {
+            sh 'docker version && cd stable/alpine/ && docker build -t nginx-example .'
         }
     }
 }
