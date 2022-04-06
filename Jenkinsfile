@@ -8,7 +8,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 script{
-                      sh 'find ./ -name 'docker'
+                      sh 'find ./ -name docker'
                       sh 'uname -a'
                       //docker build . -t testimage:v1
                     
