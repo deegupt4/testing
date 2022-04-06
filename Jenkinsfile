@@ -8,7 +8,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 script{
-                      echo "ls"
+                      sh 'ls'
                       sh 'docker version && docker build -t busybox .'
                       //docker build . -t testimage:v1
                     
