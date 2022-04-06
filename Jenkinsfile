@@ -1,3 +1,4 @@
+podTemplate {
  {
     node(POD_LABEL) {
         git 'https://github.com/nginxinc/docker-nginx.git'
@@ -5,4 +6,5 @@
             sh 'docker version && cd stable/alpine/ && docker build -t nginx-example .'
         }
     }
+}
 }
