@@ -8,7 +8,7 @@ Jenkinsfile_pod_template: Update default pod template
 How to define k8s slave label in job:-
 1. For freestyle:-
    https://devopscube.com/jenkins-build-agents-kubernetes/
-2. For pipeline:-
+2. For pipeline:-  define label of pod in agent [Jenkinsfile_slave_name]
 
     agent { label 'slave1' }
    
