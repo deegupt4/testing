@@ -12,9 +12,9 @@ spec:
         value: ""
 ''') {
     node(POD_LABEL) {
-        git 'https://github.com/nginxinc/docker-nginx.git'
+        git 'https://github.com/deegupt4/testing.git'
         container('docker') {
-            sh 'docker version && cd stable/alpine/ && docker build -t nginx-example .'
+            sh 'docker build -t busybox .'
         }
     }
 }
