@@ -7,7 +7,11 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh 'touch abc'
                 sh 'ls'
+                sh 'uname -a'
+                
+
                 sh 'docker build -t test:v1 -f Dockerfile .'
                 script{
                       echo "hello"
