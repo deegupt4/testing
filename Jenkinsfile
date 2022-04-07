@@ -8,7 +8,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'ls'
-                sh 'docker build -t test:v1 -f Dockerfile .
+                sh 'docker build -t test:v1 -f Dockerfile .'
                 script{
                       echo "hello"
                       
