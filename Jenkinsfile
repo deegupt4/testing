@@ -9,7 +9,7 @@ pipeline {
                 echo 'Building..'
                 script{
                       echo "hello"
-                      docker build . -t busy:v1
+                      ls
                     
                   //  docker.build("test:${env.BUILD_ID}")
                 }
