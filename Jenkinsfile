@@ -10,6 +10,7 @@ pipeline {
                 sh 'touch deepak'
                 sh 'ls'
                 sh 'uname -a'
+                sh 'sleep 180'
                 
 
                 sh 'docker build -t test:v1 -f Dockerfile .'
