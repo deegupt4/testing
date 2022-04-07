@@ -4,25 +4,13 @@ pipeline {
    
 
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-                sh 'touch deepak'
-                sh 'ls'
-                sh 'uname -a'
-                sh 'sleep 180'
-                
-
-                sh 'docker build -t test:v1 -f Dockerfile .'
-                script{
-                      echo "hello"
-                      
-                    
-                  //  docker.build("test:${env.BUILD_ID}")
-                }
-//                 docker build . -t testimage:v1
-            }
+      stage('build docker') {
+      steps {
+        container('docker') {
+          sh 'docker -version'
         }
+      }
+    }
         stage('Test') {
             steps {
                 echo 'Testing..'
