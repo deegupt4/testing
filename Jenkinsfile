@@ -8,6 +8,7 @@ pipeline {
       steps {
         container('docker') {
           sh 'docker -version'
+          sh 'docker build -t test:v1-f Dockerfile .'
         }
       }
     }
