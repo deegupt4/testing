@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'touch abc'
+                sh 'touch deepak'
                 sh 'ls'
                 sh 'uname -a'
                 
