@@ -12,7 +12,7 @@ spec:
         value: ""
 ''') {
     node(POD_LABEL) {
-        git 'https://github.com/deegupt4/testing.git'
+        git credentialsId: 'b3056ccd-c894-4fda-b96e-8c8a17e1f52a', url: 'https://github.com/deegupt4/testing.git'
         container('docker') {
             sh 'docker build -t busybox .'
         }
