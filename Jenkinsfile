@@ -7,7 +7,7 @@ pipeline {
       stage('build docker') {
       steps {
         container('docker') {
-          sh 'docker -version'
+          sh 'docker --version'
           sh 'docker build -t test:v1-f Dockerfile .'
         }
       }
