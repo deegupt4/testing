@@ -1,0 +1,1 @@
+kubectl get pods -n infra --no-headers=true | awk '/java11|default/{print $1}'| xargs kubectl delete -n infra  pod
