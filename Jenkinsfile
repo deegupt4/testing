@@ -4,6 +4,7 @@ pipeline {
    
 
     stages {
+      container('alpinejava11') {
       stage('build docker') {
       steps {
       sh 'docker --version'
@@ -20,6 +21,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
             }
+        }
         }
     }
 }
