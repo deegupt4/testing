@@ -1,6 +1,6 @@
 pipeline {
      //agent any
-    agent { label 'slave1' }
+    agent { label 'alpinejava11' }
    
 
     stages {
@@ -12,7 +12,7 @@ pipeline {
         }
       }
     }
-        stage('Test') {
+        stage('show java version') {
             steps {
                 echo 'Testing..'
             }
