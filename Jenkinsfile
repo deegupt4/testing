@@ -7,8 +7,10 @@ pipeline {
       
       stage('build docker') {
       steps {
+           container('alpinejava11') {
       sh 'docker --version'
           sh 'docker build -t test:v1 -f Dockerfile .'
+           }
         
       }
     }
