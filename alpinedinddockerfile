@@ -6,4 +6,5 @@ RUN  apk update \
   && apk add --update coreutils && rm -rf /var/cache/apk/*   \
   && apk add --update openjdk11 tzdata curl unzip bash \
   && apk add --no-cache nss \
+  && apk add mvn \
   && rm -rf /var/cache/apk/*
